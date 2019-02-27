@@ -1,0 +1,23 @@
+body {
+    font-family: Source Sans Pro;
+    letter-spacing: 0.03em;
+    border: 15px solid #bdc3c7;
+    padding: 15px;
+    width: 600px;
+    margin: auto;
+    
+}
+
+h2 {
+    text-transform: capitalize;
+}
+
+.date {
+    color: #3498db;
+   letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.indent {
+    border-left: 5px solid #bdc3c7;
+}
