@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <script type="text/javascript" src="../lib/jquery-3.3.1.min.js"></script>
     <title>jQuery To Do</title>
@@ -12,12 +15,12 @@
 
 <body>
     <div id="container">
-        <h1>To-Do List</h1>
-        <input type="text">
+        <h1>To-Do List <span id="toggle-form"><i class="fas fa-plus"></i></span></h1>
+        <input type="text" placeholder="Add New To-do">
         <ul>
-            <li><span>x</span> Go To Potions Class</li>
-            <li><span>x</span> Buy New Robes</li>
-            <li><span>x</span> Visit Hagrid</li>
+            <li><span><i class="fas fa-trash-alt"></i></span> Go To Potions Class</li>
+            <li><span><i class="fas fa-trash-alt"></i></span> Buy New Robes</li>
+            <li><span><i class="fas fa-trash-alt"></i></span> Visit Hagrid</li>
         </ul>
     </div>
 
