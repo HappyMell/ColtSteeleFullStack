@@ -13,6 +13,8 @@ function average(scores) {
 }
 console.log(average(scores));
 
+
+//////////////////////////////////////////////////////////////
 function average2(scores2) {
     scores2.forEach(function(score){
         total2 += score;
