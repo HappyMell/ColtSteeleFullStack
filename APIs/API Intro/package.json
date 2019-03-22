@@ -1,0 +1,11 @@
+{
+  "name": "apis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "first_request.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mellisa",
+  "license": "ISC"
+}
