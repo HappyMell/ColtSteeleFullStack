@@ -1,0 +1,22 @@
+<% include ./partials/header%>
+
+<div class="ui main text container segment">
+    <div class=" ui huge header"><%= photo.title%></div>
+    <div class="ui top attached">
+        <div class="item">
+            <img class="ui centered rounded image" src="<%= photo.image %>">
+            <div class="content">
+                <span><%= photo.dateCreated.toDateString()%></span>
+            </div>
+            <div class="description">
+                <p><%-photo.description%></p>
+            </div>
+            <a class="ui orange basic button" href="/photos/<%=photo._id%>/edit">Edit</a>
+            <form id="delete" action="/photos/<%= photo._id %>?_method=DELETE" method="POST">
+            <button class="ui red basic button">DELETE</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<% include ./partials/footer%>
