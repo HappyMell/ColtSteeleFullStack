@@ -2,6 +2,34 @@ i.icon {
     font-size: 2em;
 }
 
-.container.main {
+.ui.medium.images .image,
+.ui.medium.images img,
+.ui.medium.images svg,
+.ui.medium.image {
+    width: 200px;
+    height: 200px;
+}
+
+.ui.grid>* {
+    margin: 26px;
+}
+
+.orange {
+    float: right;
+}
+
+
+
+.main.container {
     margin-top: 7.0em;
+}
+
+
+.container.four {
+    margin-top: 7.0em;
+}
+
+#delete {
+    display: inline;
+
 }

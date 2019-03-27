@@ -95,6 +95,29 @@ app.get("/photos/:id/edit", function (req, res) {
     });
 });
 
+//Update Route
+app.put("/photos/:id", function (req, res) {
+    Photo.findByIdAndUpdate(req.params.id, req.body.photo, function (err, updatedPhoto) {
+        if (err) {
+            res.redirect("/photos");
+        } else {
+            res.redirect("/photos/" + req.params.id);
+        }
+    });
+});
+
+
+//Destroy Route
+app.delete("/photos/:id", function (req, res) {
+    Photo.findByIdAndRemove(req.params.id, function (err) {
+        if (err) {
+            res.redirect("/photos");
+        } else {
+            res.redirect("/photos");
+        }
+    });
+});
+
 //Server/////////////////////////////////////////////////
 
 app.listen(process.env.PORT || 3002, function () {

@@ -1,26 +1,28 @@
 <%include ./partials/header%>
 
-<div class="ui main text container">
+<div class="ui four column doubling stackable grid container">
     <div class="ui huge header">Photo App</div>
     <div class="ui top attached segment">
-        <div class="ui divided items">
+        <div class="five column doubling ui grid">
             <% photos.forEach(function(photo) { %>
             <div class="item">
-                <div class="image">
-                    <img src="<%= photo.image %>">
+                <div class="ui medium rounded images">
+                <a href="/photos/<%=photo._id%>">
+                    <img class="ui image" src="<%= photo.image %>">
+                    </a>
                 </div>
                 <div class="content">
-                    <a class="header" href="/photos/<%=photos._id%>"><%= photo.title%></a>
+                    <p class="header" ><%= photo.title%></p>
                     <div class="meta">
                         <span><%= photo.dateCreated.toDateString()%></span>
                     </div>
                     <div class="description">
-                        <p><%-photo.description.substring(0, 100)%>...</p>
+                        <p><%-photo.description.substring(0, 80)%></p>
                     </div>
                     <div class="extra">
-                        <a class="ui floated basic violet button" href="/photos/<%=photo._id%>"><%= photo.title%>
+                        <a class="ui floated basic tiny black button" href="/photos/<%=photo._id%>">
                             Read More
-                            <i class="right chevron icon"></i>
+                            <i class="right small chevron icon"></i>
                         </a>
 
                     </div>
