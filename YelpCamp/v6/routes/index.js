@@ -2,17 +2,30 @@ var express = require("express");
 var router = express.Router();
 var passport = require("passport");
 var User = require("../models/user");
+var Campground = require("../models/campground")
 
 
 //Root Route
+
 router.get("/", function (req, res) {
-    res.render("landing")
+    Campground.find({}, function (err, allCampgrounds) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render("campgrounds/index", {
+                campgrounds: allCampgrounds,
+                page: 'campgrounds'
+            });
+        }
+    });
 });
 
 
 //Register page & register form
 router.get("/register", function (req, res) {
-    res.render("register");
+    res.render("register", {
+        page: "register"
+    });
 })
 
 //Handle sign up logic
@@ -22,8 +35,9 @@ router.post("/register", function (req, res) {
     })
     User.register(newUser, req.body.password, function (err, user) {
         if (err) {
-            req.flash("error", err.message)
-            return res.render("register");
+            return res.render("register", {
+                error: err.message
+            });
         }
         passport.authenticate("local")(req, res, function () {
             req.flash("success", "Welcome to YelpCamp " + user.username)
@@ -35,7 +49,9 @@ router.post("/register", function (req, res) {
 
 //Show login form
 router.get("/login", function (req, res) {
-    res.render("login");
+    res.render("login", {
+        page: "login"
+    });
 });
 
 //Handle login logic

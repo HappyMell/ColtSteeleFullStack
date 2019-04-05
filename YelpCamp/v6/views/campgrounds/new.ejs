@@ -1,30 +1,30 @@
-<% include ../partials/header%>
-
-
-<div class="container">
+<% include ../partials/header %>
     <div class="row">
         <h1 style="text-align: center">Create a New Campground</h1>
         <div style="width: 30%; margin: 25px auto;">
-            <form action="/campgrounds" method="POST">
+            <form action="/campgrounds" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
                     <input class="form-control" type="text" name="name" placeholder="name">
                 </div>
                 <div class="form-group">
-                    <input class="form-control" type="text" name="image" placeholder="image url">
+                    <label for="image">Image</label>
+                    <input type="file" id="image" name="image" accept="image/*" required>
                 </div>
-                 <div class="form-group">
+                <div class="form-group">
                     <input class="form-control" type="text" name="description" placeholder="description">
                 </div>
                 <div class="form-group">
-                    <button class="btn btn-lg btn-default btn-block btn-primary">Submit</button>
-
+                <label for="location">Location</label>
+                <input class="form-control" type="text" name="location" id="location" placeholder="Yosemite National Park, CA">
+            </div>
+            <div class="form-group">
+            <input class="form-control" type="number" name="price" placeholder="price" step="0.01" min="0" required>
+            </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Submit!</button>
                 </div>
             </form>
-            <a href="/campgrounds">View All Campgrounds</a>
-
+            <a href="/campgrounds">Go Back</a>
         </div>
     </div>
-
-</div>
-
-<% include ../partials/footer%>
+<% include ../partials/footer %>

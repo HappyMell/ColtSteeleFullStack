@@ -6,7 +6,9 @@ var express = require("express"),
     passport = require("passport"),
     LocalStrategy = require("passport-local"),
     bodyParser = require("body-parser"),
-    User = require("./models/user"),
+    dotenv = require("dotenv").config();
+User = require("./models/user"),
+
     seedDB = require("./seeds");
 
 var commentRoutes = require("./routes/comments"),
@@ -26,7 +28,7 @@ app.use(flash());
 
 app.set("view engine", "ejs");
 
-
+app.locals.moment = require("moment");
 
 //Passport Configuration
 app.use(require("express-session")({
