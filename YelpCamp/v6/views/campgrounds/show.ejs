@@ -61,7 +61,6 @@
 
 
 <script>
-
   function initMap() {
     var lat = <%= campground.lat %>;
     var lng = <%= campground.lng %>;
@@ -87,8 +86,8 @@
       infowindow.open(map, marker);
     });
   }
-
 </script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpUN766x_-o-TMIzwbP78t9zCP0fNYxW4&callback=initMap"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpUN766x_-o-TMIzwbP78t9zCP0fNYxW4&callback=initMap">
+</script>
 
-<%include ../partials/footer %>
+<% include ../partials/footer %>
