@@ -12,6 +12,7 @@ User = require("./models/user"),
     seedDB = require("./seeds");
 
 var commentRoutes = require("./routes/comments"),
+    reviewRoutes = require("./routes/reviews"),
     campgroundRoutes = require("./routes/campgrounds"),
     indexRoutes = require("./routes/index")
 
@@ -55,6 +56,7 @@ app.use(function (req, res, next) {
 app.use("/", indexRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
 app.use("/campgrounds", campgroundRoutes);
+app.use("/campgrounds/:id/reviews", reviewRoutes);
 
 
 //Server///////////////////////////////////////////////////////////////////////
