@@ -3,11 +3,11 @@
 
 
 
-<header class="jumbotron">
+<header class="jumbotron text-center">
 
-    <h1>Welcome to YelpCamp</h1>
+    <h1><i class="fa fa-campground"></i>Welcome to YelpCamp</h1>
     <p>View our hand-picked campgrounds from all over the world</p>
-    <p><a class="btn btn-primary btn-lg" href="/campgrounds/new">Add New Campground</a>
+    <p><a class="btn btn-info btn-lg" href="/campgrounds/new">Add New Campground</a>
     </p>
 
 
@@ -16,7 +16,7 @@
 <div class="row text-center">
     <% campgrounds.forEach(function(campground){ %>
     <div class="col-md-3 col-sm-6 mb-4">
-        <div class="card">
+        <div  id="card" class="card">
             <img src="<%= campground.image %>" class="card-img-top" alt="<%= campground.name %>">
             <div class="card-body">
                 <h5 class="card-title"><%= campground.name %></h5>
@@ -34,7 +34,7 @@
                     <% } %>
                 </div>
                 <p>
-                    <a href="/campgrounds/<%= campground._id %>" class="btn btn-primary">More Info</a>
+                    <a href="/campgrounds/<%= campground._id %>" class="btn btn-info">More Info</a>
                 </p>
             </div>
         </div>
@@ -46,18 +46,14 @@
 
 
 
-
-
-
-
-
-       <nav aria-label="Page navigation">
+  
+       <nav aria-label="page-navigation">
         <% if (pages && pages > 0) { %>
         <ul class="pagination justify-content-center">
             <% if (current == 1) { %>
             <li class="page-item disabled"><a class="page-link">First</a></li>
             <% } else { %>
-            <li><a class="page-link" href="/campgrounds<%if(search){%>?search=<%=search%><%}%>">First</a></li>
+            <li><a class="page-link disabled" href="/campgrounds<%if(search){%>?search=<%=search%><%}%>">First</a></li>
             <% } %>
      
             <% if (current == 1) { %>
@@ -95,7 +91,6 @@
         </ul>
         <% } %>
     </nav>
-
 
 
 

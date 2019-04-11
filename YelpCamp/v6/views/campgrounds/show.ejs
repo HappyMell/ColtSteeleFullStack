@@ -7,9 +7,9 @@
          <div id="map"></div>
     <!--                    -->
     </div>
-    <div class="col-md-9">
+    <div class="col-md-9" >
 
-        <div class="card mb-3">
+        <div class="card mb-3" id="show-card">
             <img src="<%= campground.image %>" class="card-img-top" alt="<%= campground.name %>">
             <div class="card-body">
                 <h5 class="float-right">£ <%=campground.price%>/night</h5>
@@ -95,7 +95,7 @@
                 </div>
                 <% } %>
                 <div>
-                    <a class="btn btn-primary btn-md <% if (currentUser && campground.reviews.some(function (review) {return review.author.id.equals(currentUser._id)})) { %> disabled <% } %>"
+                    <a class="btn btn-info btn-md <% if (currentUser && campground.reviews.some(function (review) {return review.author.id.equals(currentUser._id)})) { %> disabled <% } %>"
                         href="/campgrounds/<%= campground._id %>/reviews/new">
                         Write a New Review</a>
                 </div>

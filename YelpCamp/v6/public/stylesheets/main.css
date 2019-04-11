@@ -1,3 +1,57 @@
+/*****
+Main page
+*/
+
+body {
+    background: #252830;
+}
+
+.jumbotron {
+    background: #434857;
+    color: white;
+}
+
+
+
+#card {
+    background: #434857;
+    color: white;
+}
+
+.page-item.disabled .page-link {
+    background: #252830;
+    color: black;
+}
+
+.page-link {
+    background: #252830;
+    color: black;
+}
+
+.active {
+    color: white;
+}
+
+/******
+Show page
+*/
+
+#show-card {
+    background: #434857;
+    color: white;
+
+}
+
+.card-body {
+    background: #434857;
+    color: white;
+
+}
+
+.card {
+    border: none;
+}
+
 .thumbnail img {
     width: 100%;
 }
@@ -56,4 +110,52 @@
     margin-bottom: 10px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+}
+
+/****
+New page
+*/
+
+#top-new {
+    color: white;
+}
+
+#new-page {
+    color: white;
+}
+
+/******
+Edit page
+*/
+
+#edit-campground {
+    color: white;
+}
+
+#campground {
+    color: white;
+}
+
+/******
+Review edit page
+*/
+
+#new-review {
+    color: white;
+}
+
+/****
+Login
+*/
+
+#login {
+    color: white;
+}
+
+/***
+Sign Up
+*/
+
+#register {
+    color: white;
 }
