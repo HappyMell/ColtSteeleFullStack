@@ -70,8 +70,9 @@
                        </div>
                         
                         
-                        <% if(currentUser && review.author.id.equals(currentUser._id)){ %>
                         <div class="float-right">
+                         <% if(currentUser && review.author.id.equals(currentUser._id)){ %>
+
                           <a class="btn btn-sm btn-warning"
                             href="/campgrounds/<%=campground._id %>/reviews/<%=review._id %>/edit">Edit</a>
                         <form id="delete-form"
